@@ -10,7 +10,7 @@ namespace dotnetMicroservicedockerImage.Models
 {
     public class EmployeeDataAccessLayer
     {
-        string connectionString = "Server=.;Database=CRUD;Trusted_Connection=True;";
+        string connectionString = Startup.ConnectionString;//    "Server=.;Database=CRUD;Trusted_Connection=True;";
         //private IConfiguration Configuration;
         
         

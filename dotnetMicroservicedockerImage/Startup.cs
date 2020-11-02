@@ -13,9 +13,11 @@ namespace dotnetMicroservicedockerImage
 {
     public class Startup
     {
+        public static string ConnectionString { get; set; }
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            //Configuration = configuration;
+            Configuration= new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -24,6 +26,7 @@ namespace dotnetMicroservicedockerImage
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            ConnectionString= Configuration["ConnectionStrings:MyConn"];
             //services.AddDbContext<>(options => options.UseSqlServer(Configuration.GetConnectionString("BloggingDatabase")));
             //.Use
             //services.usesql

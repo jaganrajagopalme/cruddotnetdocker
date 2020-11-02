@@ -12,8 +12,8 @@ namespace dotnetMicroservicedockerImage.Controllers
     public class employeecontroller : Controller
     {
 
-        private IConfiguration Configuration;
-        string connectionString = "Server=.\\SQLEXPRESS;Database=CRUD;Trusted_Connection=True;";
+       // private IConfiguration Configuration;
+        //string connectionString = "Server=.\\SQLEXPRESS;Database=CRUD;Trusted_Connection=True;";
         
 
         EmployeeDataAccessLayer objemployee = new EmployeeDataAccessLayer();
